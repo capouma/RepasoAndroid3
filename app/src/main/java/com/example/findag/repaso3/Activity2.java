@@ -1,45 +1,24 @@
 package com.example.findag.repaso3;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 
 
-public class Activity1 extends ActionBarActivity
-{
-    EditText edtNombre;
+public class Activity2 extends ActionBarActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_activity1);
-
-        Button btnSaludo = (Button) findViewById(R.id.btnBoton);
-
-        btnSaludo.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                Intent carga = new Intent(Activity1.this, Activity2.class);
-                edtNombre = (EditText) findViewById(R.id.edtNombre);
-                carga.putExtra("saludo", edtNombre.getText().toString());
-            }
-        });
+        setContentView(R.layout.activity_activity2);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_activity1, menu);
+        getMenuInflater().inflate(R.menu.menu_activity2, menu);
         return true;
     }
 
